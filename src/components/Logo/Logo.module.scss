@@ -15,15 +15,12 @@
         width: 3.5rem;
         height: auto;
         margin: 0 0.7rem 0 0;
-        z-index: 2;
     }
 
     .Logo__text {
         text-transform: lowercase;
         font-weight: 1000;
         color: var(--white);
-        font-family: "Inter", sans-serif;
-        z-index: 2;
     }
 
     .Logo__text--main {
@@ -40,6 +37,6 @@
         background: #2cb67dab;
         border-radius: 50%;
         filter: blur(100px);
-        z-index: 1;
+        z-index: -1;
     }
 }
