@@ -3,7 +3,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin: 6rem 0 0 0;
+    margin: 5.5rem 0 0 0;
     padding: 2rem;
 
     .Apresentation__anunc {
@@ -97,7 +97,7 @@
 
     .Apresentation__trust--container {
         width: 30rem;
-        margin: 3rem 3rem .5rem 3rem;
+        margin: 3rem 3rem 0.5rem 3rem;
     }
 
     .Apresentation__trust--image {
@@ -141,7 +141,7 @@
     }
 
     .Experience__title {
-        width: 26rem;
+        // width: 26rem;
         font-size: 1.75rem;
         line-height: 2.5rem;
         font-weight: bold;
@@ -155,8 +155,26 @@
     .Experience__subtitle {
         color: #d9d9d9;
         font-size: 0.9rem;
-        margin: 1.05rem 0 0;
+        margin: 1.25rem 0 0;
         width: 25rem;
+    }
+
+    .Experience__div--disclaimer {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 22.5rem;
+        margin: 1.25rem 0 0 0;
+        gap: 12px;
+    }
+
+    .Experience__div--anunc {
+        border: 1px solid #4b4b4d91;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-size: 12px;
+        background: #171717;
+        color: var(--gray);
     }
 
     .Experience__image {
@@ -186,6 +204,23 @@
     align-items: center;
     justify-content: center;
     background: #171717;
+
+    .TragaSeuProjeto__div--disclaimer {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 28px 0 0 0;
+        gap: 12px;
+    }
+
+    .TragaSeuProjeto__div--anunc {
+        border: 1px solid #4b4b4d91;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-size: 12px;
+        background: #171717;
+        color: var(--gray);
+    }
 
     .divisao {
         margin: 0 2.5rem;
@@ -217,7 +252,7 @@
         padding: 0.75rem 1.55rem;
         color: #d9d9d9;
         margin: 1.75rem 0 0 0;
-        background: #2cb67d;
+        background: #2cb67de5;
         transition: 300ms cubic-bezier(0.23, 1, 0.32, 1);
     }
 
@@ -269,7 +304,15 @@
         color: #2cb67d;
     }
 
+    .textoAjuda {
+        margin: 1.05rem 0 0 0;
+        text-align: center;
+        color: var(--gray);
+        font-size: 0.75rem;
+    }
+
     .subtitulo {
+        font-size: 0.9rem;
         text-align: center;
         margin: 1rem 0 0 0;
         color: #d9d9d9;
@@ -313,7 +356,6 @@
         background-position: center;
         background-attachment: scroll;
         padding: 4rem 0;
-        margin: 1rem 0 0 0;
     }
 
     .prototipo {

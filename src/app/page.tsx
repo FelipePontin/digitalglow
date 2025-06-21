@@ -5,9 +5,9 @@ import MainPageContent from "@/components/MainPageContent/MainPageContent";
 const Home = () => {
   return (
     <div>
-      <Header />
-      <MainPageContent />
-      {/* <Logo /> */}
+      {/* <Header />
+      <MainPageContent /> */}
+      <Logo />
     </div>
   );
 };

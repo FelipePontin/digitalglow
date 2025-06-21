@@ -13,16 +13,17 @@ import Seta from "../../images/SetaPrototipo.svg";
 import { useState } from "react";
 import Risco from "../../images/Risco.svg";
 import SetaExperiencia from "../../images/SetaExperiencia.svg";
+import { FaBrush } from "react-icons/fa6";
 
 import Layout from "../../images/Layout.svg";
 import Cafe from "../../images/Cafe.svg";
 import LogoDigitalGlow from "./../../images/Logo/LogoDigitalGlow.svg";
 
-import DirectvImage from "../../images/directv.png";
-import SkyImage from "../../images/sky.png";
-import NorwayImage from "../../images/norway.png";
-import NovaParabolicaImage from "../../images/novaparabolica.png";
-import KahuImage from "../../images/kahu.png";
+import DirectvImage from "../../images/directv.svg";
+import SkyImage from "../../images/sky.svg";
+import NorwayImage from "../../images/norway.svg";
+import NovaParabolicaImage from "../../images/novaparabolica.svg";
+import KahuImage from "../../images/kahu.svg";
 
 import Marquee from "react-fast-marquee";
 
@@ -44,7 +45,7 @@ const MainPageContent = () => {
     <div className={styles["Page__content"]}>
       <section className={styles["Apresentation"]}>
         <div className={styles["Apresentation__anunc"]}>
-          <p>🚀 IMPULSIONE SEU NEGÓCIO</p>
+          <p>🚀 Impulsione seu negócio</p>
         </div>
         <h1 className={styles["Apresentation__title"]}>
           Criando páginas que{" "}
@@ -135,6 +136,17 @@ const MainPageContent = () => {
             Ter um site não é mais opcional, é essencial para crescer e se
             destacar. Vamos criar a presença online que sua marca merece!
           </p>
+          <div className={styles["Experience__div--disclaimer"]}>
+            <div className={styles["Experience__div--anunc"]}>
+              <p>✅ Design personalizado</p>
+            </div>
+            <div className={styles["Experience__div--anunc"]}>
+              <p>⚡️ Alta performance</p>
+            </div>
+            <div className={styles["Experience__div--anunc"]}>
+              <p>📱 100% responsivo</p>
+            </div>
+          </div>
         </div>
         <Image
           src={DigitalGlowCiclo}
@@ -160,16 +172,26 @@ const MainPageContent = () => {
             <span className={styles["destaque"]}>tornar real</span>
           </h1>
           <p className={styles["subtitulo"]}>
-            Você tem uma ideia incrível? Um projeto que está apenas esperando
-            para ganhar vida? Estamos aqui para ajudarmos a transformar suas
-            ideias em realidade!
+            Tem uma ideia que precisa sair do papel? Nós criamos a solução
+            visual, funcional e estratégica para transformá-la em um site que
+            gera resultados.
           </p>
           <a
             href="https://www.linkedin.com/in/felipepanebiancopontin/"
             target="_blank"
           >
-            <button className={styles["botao"]}>Fazer um orçamento</button>
+            <button className={styles["botao"]}>
+              Fazer um orçamento gratuito
+            </button>
           </a>
+          <div className={styles["TragaSeuProjeto__div--disclaimer"]}>
+            <div className={styles["TragaSeuProjeto__div--anunc"]}>
+              <p>🚚 Entrega rápida</p>
+            </div>
+            <div className={styles["TragaSeuProjeto__div--anunc"]}>
+              <p>🛠️ Suporte total</p>
+            </div>
+          </div>
         </div>
       </section>
       <section className={styles.PrototipoSite}>
@@ -177,7 +199,7 @@ const MainPageContent = () => {
           Tudo do <span className={styles.destaque}>seu jeito</span> e como você{" "}
           <span className={styles.destaque}>imagina</span>
         </h1>
-        <p className={styles.subtitulo}>Qual estilo combina com você?</p>
+        <p className={styles.subtitulo}>O visual perfeito para o seu negócio</p>
         <div className={styles.cores}>
           <Image
             src={Seta}
@@ -198,6 +220,7 @@ const MainPageContent = () => {
             );
           })}
         </div>
+        <p className={styles.textoAjuda}>Escolha uma cor para visualizar</p>
         <div className={styles.background}>
           <div className={styles.prototipo}>
             <div className={styles.blocoCima}>
