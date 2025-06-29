@@ -1,15 +1,24 @@
 .Header {
-    position: relative;
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 1rem auto;
-    padding: 0.75rem 1.25rem;
+    padding: 0.95rem 1.55rem;
     width: 100%;
     max-width: 1320px;
+    backdrop-filter: blur(24px);
+    background-color: rgba(0, 0, 0, 0.13);
+    border-radius: 40px;
+    z-index: 999;
 
     .Header__logo--image {
-        width: 10.25rem;
+        width: 9.25rem;
     }
 
     .Header__navigation {

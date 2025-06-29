@@ -10,7 +10,7 @@ import Image from "next/image";
 import { FaHeart, FaUserCircle, FaMapMarkerAlt } from "react-icons/fa";
 import Hexagono from "../../images/Hexagono.svg";
 import Seta from "../../images/SetaPrototipo.svg";
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import Risco from "../../images/Risco.svg";
 import SetaExperiencia from "../../images/SetaExperiencia.svg";
 import { FaBrush } from "react-icons/fa6";
@@ -26,6 +26,11 @@ import NovaParabolicaImage from "../../images/novaparabolica.svg";
 import KahuImage from "../../images/kahu.svg";
 
 import Marquee from "react-fast-marquee";
+import { RiTwitterXFill, RiInstagramLine } from "react-icons/ri";
+
+import luzQuadriculada from "../../images/LuzQuadriculada.svg";
+
+import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 
 const MainPageContent = () => {
   const [cores, setCores] = useState([
@@ -40,6 +45,25 @@ const MainPageContent = () => {
   ]);
 
   const [corAtual, setCorAtual] = useState("#2DDE98");
+
+  const faqList = [
+    {
+      question: "Quanto custa uma landing page?",
+      answer:
+        "O valor varia conforme a complexidade, o número de seções e funcionalidades. Após entender sua ideia, envio um orçamento claro, justo e sem surpresas.",
+    },
+    {
+      question: "Em quanto tempo a landing page fica pronta?",
+      answer:
+        "Em média entre 5 e 10 dias úteis, dependendo do escopo. Se for algo mais simples e você já tiver o conteúdo, pode ser ainda mais rápido.",
+    },
+  ];
+
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const toggleIndex = (index: number) => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
 
   return (
     <div className={styles["Page__content"]}>
@@ -56,20 +80,24 @@ const MainPageContent = () => {
           </span>
         </h1>
         <ShinyText
-          text="Desenvolvemos landing pages rápidas e inteligentes, criadas para
+          text="Desenvolvemos landing pages rápidas e estratégicas, criadas para
           transformar visitantes em clientes"
           disabled={false}
           speed={3}
           className={styles["Apresentation__subtitle"]}
         />
         <div className={styles["Apresentation__buttons"]}>
-          <button className={styles["Apresentation__button"]}>
-            Ver Projetos
-          </button>
-          <button className={styles["Apresentation__link"]}>
-            Fale Conosco{" "}
-            <IoIosArrowForward className={styles["Apresentation__icon"]} />
-          </button>
+          <a href="https://www.instagram.com/digitalglowweb/">
+            <button className={styles["Apresentation__button"]}>
+              Ver Projetos
+            </button>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=5511953653952&text=Olá! gostaria de saber mais informações sobre a criação de landing page.">
+            <button className={styles["Apresentation__link"]}>
+              Fale Conosco{" "}
+              <IoIosArrowForward className={styles["Apresentation__icon"]} />
+            </button>
+          </a>
         </div>
         <div className={styles["Apresentation__trust--container"]}>
           <Marquee
@@ -177,7 +205,7 @@ const MainPageContent = () => {
             gera resultados.
           </p>
           <a
-            href="https://www.linkedin.com/in/felipepanebiancopontin/"
+            href="https://api.whatsapp.com/send?phone=5511953653952&text=Olá! gostaria de fazer um orçamento para a criação do meu site."
             target="_blank"
           >
             <button className={styles["botao"]}>
@@ -329,24 +357,93 @@ const MainPageContent = () => {
         </h1>
         <p className={styles.subtitulo}>
           Todos os pequenos elementos que compõem o site são de extrema
-          importância
+          importância, por isso pensamos em tudo.
         </p>
+        <div className={styles["Detalhe__div--disclaimer"]}>
+          <Marquee
+            speed={30}
+            gradient={true}
+            loop={0}
+            gradientColor={"#171717"}
+          >
+            <div className={styles["Detalhe__div--anunc"]}>
+              <p>🖥️ Versão mobile</p>
+            </div>
+            <div className={styles["Detalhe__div--anunc"]}>
+              <p>🧠 Copy escrita estrategicamente</p>
+            </div>
+            <div className={styles["Detalhe__div--anunc"]}>
+              <p>🎨 Design profissional</p>
+            </div>
+            <div className={styles["Detalhe__div--anunc"]}>
+              <p>🛠️ Instalação no domínio do cliente</p>
+            </div>
+            <div className={styles["Detalhe__div--anunc"]}>
+              <p>🌐 Integração com redes sociais</p>
+            </div>
+            <div className={styles["Detalhe__div--anunc"]}>
+              <p>🔧 Suporte após publicação</p>
+            </div>
+            <div className={styles["Detalhe__div--anunc"]}>
+              <p>📦 Entrega completa, sem pendências</p>
+            </div>
+          </Marquee>
+          <Marquee
+            speed={30}
+            gradient={true}
+            loop={0}
+            direction={"right"}
+            gradientColor={"#171717"}
+          >
+            <div className={styles["Detalhe__div--anunc"]}>
+              <p>🔒 Site seguro</p>
+            </div>
+            <div className={styles["Detalhe__div--anunc"]}>
+              <p>🔗 Link direto para WhatsApp ou e-mail</p>
+            </div>
+            <div className={styles["Detalhe__div--anunc"]}>
+              <p>📊 Estrutura pensada</p>
+            </div>
+            <div className={styles["Detalhe__div--anunc"]}>
+              <p>🔎 Atenção aos mínimos detalhes</p>
+            </div>
+            <div className={styles["Detalhe__div--anunc"]}>
+              <p>📈 Foco na conversão</p>
+            </div>
+            <div className={styles["Detalhe__div--anunc"]}>
+              <p>👣 Jornada fluida</p>
+            </div>
+            <div className={styles["Detalhe__div--anunc"]}>
+              <p>🧭 Hierarquia visual</p>
+            </div>
+          </Marquee>
+        </div>
       </section>
 
       <section className={styles.Ajuda} id="ajuda">
         <h1 className={styles.titulo}>
-          Como eu posso <span className={styles.destaque}>te ajudar?</span>
+          Como podemos <span className={styles.destaque}>ajudar</span>?
         </h1>
         <div className={styles.divisoesAjuda}>
+          <div className={styles.luzQuadriculada}>
+            <Image
+              src={luzQuadriculada}
+              alt="luzQuadriculada"
+              width={undefined}
+              height={undefined}
+              className={styles.luzQuadriculada__image}
+              priority
+            />
+          </div>
           <div className={styles.divisaoAjuda}>
             <div className={styles.divisaoInformacao}>
-              <p className={styles.tituloAjuda}>Eu quero uma Landing Page</p>
+              <p className={styles.tituloAjuda}>Eu quero um site</p>
               <span className={styles.subtituloAjuda}>
-                Desenvolverei uma Landing Page para o seu negócio com um design
+                Vamos desenvolver um site para o seu negócio com um design
                 moderno e atraente para gerar engajamento.
               </span>
               <a
-                href="https://www.linkedin.com/in/felipepanebiancopontin/"
+                href="https://api.whatsapp.com/send?phone=5511953653952&text=Olá! quero uma landing page para meu negócio."
                 target="_blank"
               >
                 <button className={styles.botaoAjuda}>Saber Mais</button>
@@ -370,7 +467,7 @@ const MainPageContent = () => {
                 você.
               </span>
               <a
-                href="https://www.linkedin.com/in/felipepanebiancopontin/"
+                href="https://api.whatsapp.com/send?phone=5511953653952&text=Olá! tenho uma ideia de projeto e gostaria de bater um papo."
                 target="_blank"
               >
                 <button className={styles.botaoAjuda}>Contato</button>
@@ -392,7 +489,42 @@ const MainPageContent = () => {
         <h1 className={styles.titulo}>
           Vamos criar algo excepcional juntos 🚀
         </h1>
+        {/* <p className={styles.subtitulo}>
+          Confiança, experiência e dedicação em cada projeto
+        </p> */}
         <button className={styles.botao}>BORA!</button>
+      </section>
+
+      <section className={styles.faq}>
+        <h1 className={styles.titulo}>
+          <span className={styles.destaque}>Perguntas</span> frequentes
+        </h1>
+        <p className={styles.subtitulo}>Dúvidas que talvez você tenha</p>
+        <div className={styles.faqs}>
+          {faqList.map((faq, index) => (
+            <div
+              key={index}
+              onClick={() => toggleIndex(index)}
+              className={styles.faqs__container}
+            >
+              <div className={styles.faq__division}>
+                <p className={styles.faq__title}>{faq.question}</p>
+                {activeIndex === index ? (
+                  <FaAngleUp className={styles.faq__icon} />
+                ) : (
+                  <FaAngleDown className={styles.faq__icon} />
+                )}
+              </div>
+              <div
+                className={`${styles.faq__answer} ${
+                  activeIndex === index ? `${styles.active}` : ""
+                }`}
+              >
+                <p>{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       <footer className={styles.rodape}>
@@ -404,6 +536,19 @@ const MainPageContent = () => {
           className={styles.logo}
           priority
         />
+        <div className={styles["Header__social"]}>
+          <a href="https://x.com/digitalglow_web">
+            <div className={styles["Header__social--division"]}>
+              <RiTwitterXFill className={styles["Header__social--icon"]} />
+            </div>
+          </a>
+          <a href="https://www.instagram.com/digitalglowweb/">
+            <div className={styles["Header__social--division"]}>
+              <RiInstagramLine className={styles["Header__social--icon"]} />
+            </div>
+          </a>
+        </div>
+        <p>Copyright © 2025 Digital Glow. All rights reserved.</p>
       </footer>
     </div>
   );
